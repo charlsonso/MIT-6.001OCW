@@ -1,60 +1,61 @@
-# #################
-# #Problem Set 1
-# #MIT OCW 6.001
-# #Charlson So
-# #################
+#################
+#Problem Set 1
+#MIT OCW 6.001
+#Charlson So
+#June 20, 2017
+#################
 
 
-# #Problem 1
-# #---------------------------------------------------------------------------------------------
-# #Paying the Minium:
-# #Program that will find the amount left on your credit card after making minimum payments
+#Problem 1
+#---------------------------------------------------------------------------------------------
+#Paying the Minium:
+#Program that will find the amount left on your credit card after making minimum payments
 
-# print('Find out the balance of your credit card after X amount of months!')
+print('Find out the balance of your credit card after X amount of months!')
 
-# princBal = float(raw_input('What is the balance you borrowed on your credit card? '))
-# interRate = float(raw_input('What is the yearly interest rate on your credit card? (0.XX)'))
-# minMonRate = float(raw_input('What minimum percentage will you make on your credit card? (0.XX)'))
-# totalPaid = 0
-# #calculates the monthly payment and interest payment, deducts interest from monthly pay and removes the remaining balance
-# #from the principal. calculates the remaining balance after 12 months
-# for x in range(1,13):
-# 	print 'Month ' + str(x)
-# 	monPay = round(minMonRate*princBal,2)
-# 	totalPaid += monPay
-# 	print 'Monthly Payment made is $' + str(monPay)
-# 	monInt = round(princBal*interRate/12,2)
-# 	print 'Montly Interest is $' +str(monInt)
-# 	prinPay = monPay - monInt
-# 	princBal -=prinPay
-# 	print 'You will be making a principal payment of ' + str(prinPay) +' and your remaining balance is '+str(princBal)
-# 	print '-----------------------'
-# print '-----RESULT-----'
-# print 'Total amount paid $'+str(totalPaid)
-# print 'Remaining Balance $'+str(princBal)
+princBal = float(raw_input('What is the balance you borrowed on your credit card? '))
+interRate = float(raw_input('What is the yearly interest rate on your credit card? (0.XX)'))
+minMonRate = float(raw_input('What minimum percentage will you make on your credit card? (0.XX)'))
+totalPaid = 0
+#calculates the monthly payment and interest payment, deducts interest from monthly pay and removes the remaining balance
+#from the principal. calculates the remaining balance after 12 months
+for x in range(1,13):
+	print 'Month ' + str(x)
+	monPay = round(minMonRate*princBal,2)
+	totalPaid += monPay
+	print 'Monthly Payment made is $' + str(monPay)
+	monInt = round(princBal*interRate/12,2)
+	print 'Montly Interest is $' +str(monInt)
+	prinPay = monPay - monInt
+	princBal -=prinPay
+	print 'You will be making a principal payment of ' + str(prinPay) +' and your remaining balance is '+str(princBal)
+	print '-----------------------'
+print '-----RESULT-----'
+print 'Total amount paid $'+str(totalPaid)
+print 'Remaining Balance $'+str(princBal)
 
-# #Problem 2
-# #-----------------------------------------------------------------------------------------------
-# #Paying Debt Off In a Year
+#Problem 2
+#-----------------------------------------------------------------------------------------------
+#Paying Debt Off In a Year
 
-# print('Figure out how much your payments need to be to pay off your balance in a year')
+print('Figure out how much your payments need to be to pay off your balance in a year')
 
-# princBal = float(raw_input('What is the balance you borrowed on your credit card? '))
-# interRate = float(raw_input('What is the yearly interest rate on your credit card? (0.XX)'))
-# checkBal = princBal
-# monthPay = 0
-# month = 0
-# while checkBal > 0:
-# 	month = 0
-# 	monthPay +=10
-# 	checkBal = princBal
-# 	while month <12 and checkBal>0:
-# 		month +=1
-# 		checkBal = checkBal + (interRate*checkBal/12) - monthPay
+princBal = float(raw_input('What is the balance you borrowed on your credit card? '))
+interRate = float(raw_input('What is the yearly interest rate on your credit card? (0.XX)'))
+checkBal = princBal
+monthPay = 0
+month = 0
+while checkBal > 0:
+	month = 0
+	monthPay +=10
+	checkBal = princBal
+	while month <12 and checkBal>0:
+		month +=1
+		checkBal = checkBal + (interRate*checkBal/12) - monthPay
 
-# print 'Monthly Payment to pay off debt in 1 year: ',monthPay
-# print 'Number of months needed ', month
-# print 'Balance: ', round(checkBal,2)
+print 'Monthly Payment to pay off debt in 1 year: ',monthPay
+print 'Number of months needed ', month
+print 'Balance: ', round(checkBal,2)
 
 #Problem 3
 #----------------------------------------------------------------------------------------------
